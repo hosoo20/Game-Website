@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--get rid of this-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--remove-->
+    <title>Game Academy</title>
+    <link rel="icon" type="image/x-icon" href="https://cws.auckland.ac.nz/gas/api/FavIcon">
+    <link rel="stylesheet" href="hcha560.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+  </head>
+
+  <body>
+    <!--HEAD - Navigation - Main banner-->
+    <nav>
+      <!--Navigation Bar Links-->
+      <div class="logo">
+        <a href="#" class="navbar-logo" style="text-decoration: none;"
+        ><img alt="Game Academy Logo" id="GA-logo" src="https://cws.auckland.ac.nz/gas/api/Logo"/><span class="nav-logo"><h4>GAME ACADEMY</h4></span></a>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <button class="tabLink" onclick="openTab(event, 'home')" id="defaultOpen">Home</button>
+        </li>
+        <li>
+          <button class="tabLink" onclick="openTab(event, 'shop')">Shop</button>
+        </li>
+        <li>
+          <button class="tabLink" onclick="openTab(event, 'game')">Game</button>
+        </li>
+        <li>
+          <button class="tabLink" onclick="openTab(event, 'comment')">Guest Book</button>
+        </li>
+        <li>
+          <button class="tabLink" onclick="openTab(event, 'login-register')" value="login" id="login-nav-btn"><span class="login" id="loginNavText">Login/Register</span></button>
+        </li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    
+    <div id="home" class="tabContent">
+      <div class="main">
+        <div class="main-container">
+          <div>
+            <h1>Welcome </h1><h1>to the <span class="GA">Game Academy</span></h1>
+            <h3>Browse through our wide range of fun Products to rid you of your boredom.
+              <br>Entertain yourself with a round of Chess.
+              <br> Check out and become a part of our forum.
+            </h3>
+          </div>
+        <div id="version"><em>Server: </em></div>
+
+      </div>
+      </div>
+    </div>
+  
+
+    <!--tabs-->
+    <div id="shop" class="tabContent">
+      <div class="shop-tab">
+          <div class="shop-header">
+            <h1 class = "heading">The Game Shop</h1>
+            <div class="search-bar-container">
+              <form class="search-bar" id="searchbar">
+                <input type="text" id="searchitem" placeholder="Search">
+                <button><img src="https://cdn-icons-png.flaticon.com/512/107/107122.png"></button>
+              </form>
+            </div>
+          <div class = "table-container">
+            <table class ="table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody id="table_body">
+                    <tr>
+                        <td data-label="Image" id="image-label"><img alt="Product Image" id="itemPhoto" src="https://cws.auckland.ac.nz/gas/api/FavIcon" ></td>
+                        <td data-label="Description" id="descrip" class="description-p"><button onclick="buyProduct()" id="buy" value="0" class="btn">Buy Now</button></td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="game" class="tabContent">
+      <div class="games-container">
+        <h2>Play Chess</h2>
+        <div class="chessboard">
+            <div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+            </div>
+            <div>
+                <div class="box-edge"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Rb.svg"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Nb.svg"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Bb.svg"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Qb.svg"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Kb.svg"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Bb.svg"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Nb.svg"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Rb.svg"></div>
+                <div class="box-edge"></div>
+            </div>
+
+            <div>
+                <div class="box-edge"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Pb.svg"></div>
+                <div class="box-edge"></div>
+            </div>
+            <div>
+                <div class="box-edge"></div>
+                <div class="box-white"></div>
+                <div class="box-black"></div>
+                <div class="box-white"></div>
+                <div class="box-black"></div>
+                <div class="box-white"></div>
+                <div class="box-black"></div>
+                <div class="box-white"></div>
+                <div class="box-black"></div>
+                <div class="box-edge"></div>
+            </div>
+
+            <div>
+                <div class="box-edge"></div>
+                <div class="box-black"></div>
+                <div class="box-white"></div>
+                <div class="box-black"></div>
+                <div class="box-white"></div>
+                <div class="box-black"></div>
+                <div class="box-white"></div>
+                <div class="box-black"></div>
+                <div class="box-white"></div>
+                <div class="box-edge"></div>
+            </div>
+            <div>
+                <div class="box-edge"></div>
+                <div class="box-white"></div>
+                <div class="box-black"></div>
+                <div class="box-white"></div>
+                <div class="box-black"></div>
+                <div class="box-white"></div>
+                <div class="box-black"></div>
+                <div class="box-white"></div>
+                <div class="box-black"></div>
+                <div class="box-edge"></div>
+            </div>
+
+            <div>
+                <div class="box-edge"></div>
+                <div class="box-black"></div>
+                <div class="box-white"></div>
+                <div class="box-black"></div>
+                <div class="box-white"></div>
+                <div class="box-black"></div>
+                <div class="box-white"></div>
+                <div class="box-black"></div>
+                <div class="box-white"></div>
+                <div class="box-edge"></div>
+            </div>
+            <div>
+                <div class="box-edge"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Pw.svg"></div>
+                <div class="box-edge"></div>
+            </div>
+
+            <div>
+                <div class="box-edge"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Rw.svg"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Nw.svg"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Bw.svg"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Qw.svg"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Kw.svg"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Bw.svg"></div>
+                <div class="box-black"><img src="https://cws.auckland.ac.nz/gas/images/Nw.svg"></div>
+                <div class="box-white"><img src="https://cws.auckland.ac.nz/gas/images/Rw.svg"></div>
+                <div class="box-edge"></div>
+            </div>
+            <div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+                <div class="box-edge"></div>
+            </div>
+            <div class="rulesTextBox">
+                <p>The rules.............</p>
+            </div>
+            <div class="chess-button-container">
+                <button onclick="startGame()" id="startBtn">Start Game</button>
+                <button onclick="quitGame()" id="quitBtn" value="">Quit Game</button>
+            </div>
+            <div>
+              <p id="gameStartData">hi</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div id="comment" class="tabContent">
+      <div class="comments-container">
+        <div class = "comment-table-container">
+          <div class="comment-box">
+            <p>Leave a Comment</p>
+            <form class="comment-form" id="form-comment">
+                <input type="text" id="commentName" placeholder="Name">
+                <textarea rows="4" id="commentWrote" placeholder="Leave comment here"></textarea>
+                <button type="submit"> Post Comment</button>
+            </form>
+          </div>
+          <h3>Comments</h3>
+          <iframe src="https://cws.auckland.ac.nz/gas/api/Comments" title="Iframe Comments" id="iframeComment"></iframe>
+          <!-- <table class ="comment-table">
+              <thead>
+                  <tr>
+                      <th>Comments</th>
+                  </tr>
+              </thead>
+              <tbody id="comment-table_body">
+                  <tr>
+                      <td data-label="Comments" class="comment">Comment</td>
+                  </tr>
+              </tbody>
+          </table> -->
+        </div>
+      </div>
+    </div>
+
+    <div id="login-register" class="tabContent">
+        <div class="login-register-container">
+          <div class="form-box">
+              <div class="button-box">
+                  <div id="login-register-btn"></div>
+                  <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                  <button type="button" class="toggler-btn"onclick="register()">Register</button>
+              </div>
+              <form class="input-group" id="login">
+                  <input type="text" class="input-field" id="unamel" placeholder="Enter Username" required>
+                  <input type="password" class="input-field" id="pswl"  placeholder="Enter Password" required>
+                  <button type="submit" class="submit-btn" id="submit-log"value="todo">Log in</button>
+              </form>
+              <form class="input-group" id="register" method="post">
+                  <input type="text" class="input-field" id="uname" placeholder="Enter Username" required>
+                  <input type="password" class="input-field" id="psw" placeholder="Enter Password" required>
+                  <input type="text" class="input-field" id="address" placeholder="Enter Address" required>
+                  <button type="submit" class="submit-btn" value="Add Todo">Register</button>
+              </form>
+          </div>
+    </div>
+
+
+
+    <script src="hcha560.js"></script>
+  </body>
+  </html>
+
+  <!-- credits:
+  <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Vaadin - Flaticon</a> -->
